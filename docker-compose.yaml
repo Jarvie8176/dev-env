@@ -22,6 +22,7 @@ services:
       - ./sql/schema/chii_ep_revisions.sql:/docker-entrypoint-initdb.d/18.sql
       - ./sql/schema/20211208_bangumi_subject.sql:/docker-entrypoint-initdb.d/19.sql
       - ./sql/schema/chii_episodes.sql:/docker-entrypoint-initdb.d/20.sql
+      - ./sql/schema/chii_subject_interests.sql:/docker-entrypoint-initdb.d/21.sql
 
       - ./sql/data/data_chii_person_fields.sql:/docker-entrypoint-initdb.d/50.sql
       - ./sql/data/data_chii_characters.sql:/docker-entrypoint-initdb.d/51.sql
@@ -50,6 +51,9 @@ services:
       - ./sql/data/chii_subject_posts.sql:/docker-entrypoint-initdb.d/79.sql
 
       - ./sql/data/chii_user_treehole.sql:/docker-entrypoint-initdb.d/99.sql
+
+      - ./sql/data/data_chii_person_collects.sql:/docker-entrypoint-initdb.d/990.sql
+      - ./sql/data/data_chii_subject_interests_treehole.sql:/docker-entrypoint-initdb.d/991.sql
 
     environment:
       MYSQL_ROOT_PASSWORD: secret

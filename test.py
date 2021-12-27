@@ -32,6 +32,7 @@ def main():
         "chii_subjects",
         "chii_subject_alias",
         "chii_subject_fields",
+        "chii_subject_interests",
         "chii_subject_relations",
         "chii_rev_text",
         "chii_ep_revisions",
